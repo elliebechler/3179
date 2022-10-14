@@ -1,0 +1,12 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/elliebechler/3179/main/mcdonalds_dataset.csv"
+  },
+  "mark": "point",
+  "encoding": {
+    "x": {"field": "lon", "type": "quantitative"},
+    "y": {"field": "lat", "type": "quantitative"}
+  },
+  "config": {}
+}
