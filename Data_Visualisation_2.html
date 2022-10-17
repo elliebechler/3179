@@ -2,6 +2,15 @@
 <html>
 
 <head>
+  <style>
+  body {
+    background-image: url('https://media.wired.com/photos/6077243240d7cfe5e259427c/master/pass/web_hp_IceCream_15046_2.jpg');
+  }
+  </style>
+</head>
+
+
+<head>
   <title>Multiple Visualisations | An Example</title>
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
@@ -9,7 +18,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 
   <!-- Import pure.css -->
-  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+  <link rel="Data_vis_2" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
     integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,75 +30,150 @@
   <!-- CSS file -->
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
 
-
 </head>
+
+<head><
+  <link rel="stylesheet" href="Data_vis_2.css">
+</head>
+
 
 <body>
 
   <div class="page">
 
     <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-1">
-        <h1>Data Visualisation 2</h1>
-        <p>FIT3179 Data Visualisation Assignemnt 2.</p>
+    <center>
+      <div class="pure-g">
+        <div class="pure-u-1-1">
+          <div style="background-color:rgba(255, 255, 255, 0.783);color:black;padding:50px">
+            <h1>FIT3179 Data Visualisation 2</h1>
+            <p>Student ID: 31471684 </p>
+          </div>
+        </div>
       </div>
-    </div>
+    </center>
     <!-- end pure grid group -->
 
     <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-1-2">
-        <div class="description description-left">
-          <h2>Bar Chart</h2>
-          <p>The first graph contains the data for the latitude and longitude of all reocrded machines. </p>
+        <div class="description description-right">
+        <div style="padding:10px">
+          <p>
+          <img src="https://media.wired.com/photos/607f51ffff921397ebfdb2f5/master/w_2560%2Cc_limit/web2_2021_04_09_IceCream_15284.jpg" 
+          alt="Ice Cream" style="float:right;width:420px;height:260px;">
+            It’s a running joke that the McDonald’s ice cream machine always<br>
+            seems to be broken. The main reason that it's always broken is 
+            that the McDonald’s ice cream machines take forever to clean, 
+            taking up to four hours to sanitize—and it has to be done every
+            single day. When the machines are in the process of being cleaned, 
+            they can’t serve ice<br>
+             cream. Telling you that the ice cream machine is
+            broken instead of admitting that they are too lazy to clean it is 
+            just one of the secrets that fast-food workers won’t tell you.
+            This visualisation contains information on the number of "broken"
+            and working soft serve machines at McDonalds in the United States 
+            of America. The following analysis highlights the difference between 
+            the number of working versus broken machines per state in the US.
+          </p>
         </div>
       </div>
+      </div>
       <div class="pure-u-1-2">
-        <div id="vis2" class="vis-container"></div>
       </div>
     </div>
     <!-- end pure grid group -->
-
+    
 
     <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-1-2">
-        <div class="description description-left">
-          <h2>Bar Chart</h2>
-          <p>The graph contains the data for the number of working, broken and inactive machines per state. </p>
+        <div class="flex-container">
+          <p align="left">
+            <br>
+            <br>
+            <br>
+            This visualisation will focus on the top 10 states with
+            the most McDonald's franchises per state. These states
+            are California, Florida, Georgia, Illinois, Michigan,
+            New York, North Carolina, Ohio, Pennsylvania and Texas. 
+            California has the most McDonald's franchises out of all 
+            the states at 1,186, and Texas is a close second with 
+            1,122 franchises.
+        <div class="flex-container">
+            <div id="vis1" class="vis-container" style="margin-left: 15px"></div>
         </div>
-      </div>
-      <div class="pure-u-1-2">
-        <div id="vis1" class="vis-container"></div>
       </div>
     </div>
     <!-- end pure grid group -->
 
+    
     <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-2">
-        <div class="description description-left">
-          <h2>Map of broken machines</h2>
-          <p>The graph contains the data for the location of broken machines in the US. </p>
-        </div>
-      </div>
-      <div class="pure-u-1-2">
+    <div class="flex-container">
+      <br>
+      <br>
+      <div class="flex-container">
+        <br>
+        <br>
         <div id="vis3" class="vis-container"></div>
+      <div class="pure-u-1-2">
+        <div class="description description-left">
+          <p align="right">
+            <br>
+            <br>
+            <br>
+            This map shows the locations of the recorded broken machines in the 10 states mentioned earlier.
+            From this map we can see that the majority or broken machines are in and around heavily populated cities. This could be due 
+            to the high customer base that these franchises would have when comapred to some of the more rural franchises. The high 
+            volume of customers would impact the employees ability to ensure that the machines are fixed and functional.
+        </div>
+      </div>
       </div>
     </div>
     <!-- end pure grid group -->
 
-     <!-- pure grid group -->
-     <div class="pure-g">
+
+    <!-- pure grid group -->
+    <div class="pure-g">
       <div class="pure-u-1-2">
-        <div class="description description-left">
-          <h2>Map of working machines</h2>
-          <p>The graph contains the data for the location of working machines in the US. </p>
+        <div class="flex-container">
+          <p align="left">
+            <br>
+            <br>
+            <br>
+            This map of the 10 states that we are looking at, shows the locations of the recorded working machines. 
+            From this map we can see that the franchinses with working machines are pretty evenly spread out throughout 
+            the states we are researching. One exception to this would be Michigan. When comapring Michigan's working 
+            and broken machines, we can see in this map, that the part of Michigan that borders Wisconsin only has working 
+            machines. There is nothing similar with the nine other states that we are looking at.
+        <div class="flex-container">
+          <br>
+          <br>
+          <br>  
+          <div id="vis4" class="vis-container"></div>
         </div>
       </div>
+    </div>
+    <!-- end pure grid group -->
+
+
+    <!-- pure grid group -->
+    <div class="flex-container">
+      <br>
+      <div class="flex-container">
+        <br>
+        <div id="vis5" class="vis-container"></div>
       <div class="pure-u-1-2">
-        <div id="vis4" class="vis-container"></div>
+        <div class="felx-container">
+          <p align="right">
+            The map contains the data for the location of working and broken machines in the state of Texas. The majority 
+            of franchises that were included in this dataset from Texas are located on the east coast, as seen in the map.
+            This is probbaly due to the fact that some of Texas' biggest cities such as Dallas, Fort Worth, Waco, Austin, 
+            San Antonio and Houston. Because these cities have high populations, the amount of franchises would be higher 
+            in order to cater to the local population.
+          </p>
+        </div>
+      </div>
       </div>
     </div>
     <!-- end pure grid group -->
@@ -98,24 +182,28 @@
     <div class="pure-g">
       <div class="pure-u-1-2">
         <div class="description description-left">
-          <h2>Map of working and broken machines</h2>
-          <p>The graph contains the data for the location of working and broken machines in the US. The working machines are in blue, and the broken machines are in red.</p>
+          <br>
+          <p align="center">
+            The dot plot below shows how many wokring and broken machines<br> 
+            in each state in the United States of America.</p>
         </div>
       </div>
       <div class="pure-u-1-2">
-        <div id="vis5" class="vis-container"></div>
+        <div id="vis6" class="vis-container"></div>
       </div>
     </div>
     <!-- end pure grid group -->
+
 
   </div> <!-- end page -->
 
   <script type="text/javascript">
-    var specVis1 = "visualization.vl.json";
-    var specVis2 = "vis2.json";
-    var specVis3 = "vis3.json";
-    var specVis4 = "vis4.json";
+    var specVis1 = "Bar Chart Comparing Working & Broken Machines for every 2nd state.json";
+    var specVis2 = "Latitude & Longitude coordinates of all recorded machines.json";
+    var specVis3 = "Map of broken machines.json";
+    var specVis4 = "Map of working machines.json";
     var specVis5 = "vis5.json";
+    var specVis6 = "Bar Chart Count of Working for 2nd state.json";
 
     vegaEmbed('#vis1', specVis1, { "actions": false });
 
@@ -134,6 +222,11 @@
     vegaEmbed('#vis5', specVis5, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
+
+    vegaEmbed('#vis6', specVis6, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
   </script>
 </body>
 

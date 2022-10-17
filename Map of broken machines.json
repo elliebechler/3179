@@ -15,43 +15,33 @@
       "data": {
         "url": "https://raw.githubusercontent.com/elliebechler/3179/main/mcdonalds_dataset.csv"
       },
-       "transform": [{"filter": {"field": "Working/Broken", "oneOf": ["Broken"]}},{"filter": {"field": "Country", "oneOf": ["USA"]}}, 
-       {"filter": {"field": "State", "oneOf": ["TX"]}}],   
+       "transform": [{"filter": {"field": "Working/Broken", "oneOf": ["Broken"]}},
+       {"filter": {"field": "Country", "oneOf": ["USA"]}}, 
+       {"filter": {"field": "State", "oneOf": [
+        "CA", 
+        "TX", 
+        "FL",
+        "IL",
+        "OH",
+        "NY",
+        "MI",
+        "PA",
+        "NC",
+        "GA"]}}],     
       "mark": "circle",
       "encoding": {
         "longitude": {"field": "Latitude", "type": "quantitative"},
         "latitude": {"field": "Longitude", "type": "quantitative"},
        
         "color": {"value": "orange"},
-
+        
         "tooltip": [
           {"field": "State", "type": "nominal"},
           {"field": "City", "type": "nominal"},
           {"field": "Address", "type": "nominal"},
           {"field": "Working/Broken", "type": "nominal"}
           ]
-      }
-    },
-    {
-      "data": {
-        "url": "https://raw.githubusercontent.com/elliebechler/3179/main/mcdonalds_dataset.csv"
-      },
-       "transform": [{"filter": {"field": "Working/Broken", "oneOf": ["Working"]}},{"filter": {"field": "Country", "oneOf": ["USA"]}}, 
-       {"filter": {"field": "State", "oneOf": ["TX"]}}],   
-      "mark": "circle",
-      "encoding": {
-        "longitude": {"field": "Latitude", "type": "quantitative"},
-        "latitude": {"field": "Longitude", "type": "quantitative"},
-       
-        "color": {"value": "red"},
-
-        "tooltip": [
-          {"field": "State", "type": "nominal"},
-          {"field": "City", "type": "nominal"},
-          {"field": "Address", "type": "nominal"},
-          {"field": "Working/Broken", "type": "nominal"}
-          ]
-      }
+        }
     }
   ],
   "config": {}

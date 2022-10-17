@@ -1,0 +1,61 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 850,
+  "height": 250,
+  "description": "A simple bar chart with embedded data.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/elliebechler/3179/main/mcdonalds_dataset.csv"
+  },
+  "transform": [
+    {"filter": {"field": "Country", "oneOf": ["USA"]}},
+    {
+      "filter": {
+        "field": "State",
+        "oneOf": [
+          "AK",
+          "AR",
+          "CA",
+          "CT",
+          "DE",
+          "GA",
+          "IA",
+          "IL",
+          "KS",
+          "KY",
+          "MA",
+          "ME",
+          "MN",
+          "MS",
+          "NC",
+          "NE",
+          "NJ",
+          "NV",
+          "OH",
+          "OR",
+          "RI",
+          "SD",
+          "TX",
+          "VA",
+          "WA",
+          "WV"
+        ]
+      }
+    },
+    {"filter": {"field": "Working/Broken", "oneOf": ["Broken", "Working"]}}
+  ],
+  "mark": {"type": "circle", "tooltip": true},
+  "encoding": {
+    "x": {"field": "State", "type": "ordinal", "axis": {"labelAngle": 0}},
+    "y": {
+      "aggregate": "count",
+      "axis": {"tickCount": 10, "grid": true},
+      "title": "Count"
+    },
+    "color": {
+      "field": "Working/Broken",
+      "type": "nominal",
+      "scale": {"domain": ["Broken", "Working"], "range": ["orange", "red"]}
+    }
+  },
+  "config": {}
+}

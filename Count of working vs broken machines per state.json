@@ -1,0 +1,18 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple bar chart with embedded data.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/elliebechler/3179/main/mcdonalds_dataset.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "tooltip": [
+      {"field": "Working/Broken", "type": "nominal"},
+      {"field": "State", "type": "nominal"}
+    ],
+    "x": {"field": "State"},
+    "y": {"field": "Working/Broken", "type": "nominal"},
+    "xOffset": {"field": "Working/Broken"}
+  },
+  "config": {}
+}
